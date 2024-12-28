@@ -8,13 +8,15 @@ import com.example.dsdesafio1.enetities.Order;
 public class ShippingService {
 	
 	public int shippingPrice(Order order) {
-		int shipValue = 0;
+		int shipValue = (order.getBasic() < 100) ? 20 : (order.getBasic() >= 100 && order.getBasic() < 200) ? shipValue = 12 : 0 ;
 		
-		if (order.getBasic() < 100) {
-			shipValue = 20;
-		} else if (order.getBasic() >= 100 && order.getBasic() < 200){
-			shipValue = 12;
-		}
+//		if (order.getBasic() < 100) {
+//			shipValue = 20;
+//		} else if (order.getBasic() >= 100 && order.getBasic() < 200){
+//			shipValue = 12;
+//		}
+		
+		
 		
 		return  shipValue;
 	}
